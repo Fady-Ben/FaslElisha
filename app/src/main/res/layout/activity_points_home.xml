@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_points_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:text="Name :"
+        android:id="@+id/textView"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/nameTextViewAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:text="TextView" />
+
+
+    <CheckBox
+        android:text="القداس"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alkodasCheckBoxAPH"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+    <CheckBox
+        android:text="شماس"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shamasCheckBoxAPH"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+    <CheckBox
+        android:text="أسم قديس السنكسار"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/asmElKdisCheckBoxAPH"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+    <CheckBox
+        android:text="سيرة قديس السنكسار"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sertElKdisCheckBoxAPH"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+    <CheckBox
+        android:text="alEngilCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox6"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+    <CheckBox
+        android:text="mawdo3AlEngilCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox7"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+
+
+    <CheckBox
+        android:text="hdorElFaslCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox8" />
+
+    <CheckBox
+        android:text="eltzamCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox9" />
+
+    <Button
+        android:text="SubmitAPH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/submitButtonAPH" />
+
+</LinearLayout>

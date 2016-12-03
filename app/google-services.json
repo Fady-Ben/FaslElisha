@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1058756822561",
+    "firebase_url": "https://faslelisha-ea56a.firebaseio.com",
+    "project_id": "faslelisha-ea56a",
+    "storage_bucket": "faslelisha-ea56a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058756822561:android:a4e473934e13a0c1",
+        "android_client_info": {
+          "package_name": "org.elisha.faslelisha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058756822561-48toppr094nafk29khhtlc2sa4n4mjmg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.elisha.faslelisha",
+            "certificate_hash": "2695B8FEA67CBC4CD4D1798E84A9FD968207AB9D"
+          }
+        },
+        {
+          "client_id": "1058756822561-99drv2fk9nke05urin2e7lls1ijd2s8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHfHgZ8mg34c-q4nhatNdjPjcnwrPS76E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058756822561-99drv2fk9nke05urin2e7lls1ijd2s8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
