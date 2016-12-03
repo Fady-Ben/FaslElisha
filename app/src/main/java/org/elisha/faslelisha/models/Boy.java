@@ -5,6 +5,7 @@ import android.graphics.Picture;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  * Created by Fady on 29-Sep-16.
  */
 @IgnoreExtraProperties
-public class Boy {
+public class Boy implements Serializable {
     private int id;
     private String name;
     private Picture profilePicture;

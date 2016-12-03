@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public void init() {
         try {
 
-            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+            /*FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             DatabaseReference database = FirebaseDatabase.getInstance().getReference();
             database.keepSynced(true);
 
@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
                         Boy boy = noteDataSnapshot.getValue(Boy.class);
                         boys.add(boy);
                         Log.i(TAG, "Boy Name: " + boy.getName());
+                        Log.i(TAG, "Boy id: " + boy.getId());
+                        Log.i(TAG, "Boy totalPoints: " + boy.getTotalPoints());
                     }
                 }
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     // Failed to read value
                     Log.w(TAG, "Failed to read value.", error.toException());
                 }
-            });
+            });*/
 
         } catch (Exception e) {
 
