@@ -50,12 +50,8 @@ public class PointsHomeActivity extends AppCompatActivity {
     public void initView() {
 
         try {
-            FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-            DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-            database.keepSynced(true);
-
-            database.child("Boys").child(String.valueOf(boyId)).addValueEventListener(new ValueEventListener() {
-
+            FirebaseDatabase.getInstance().getReference().child("Boys").child(String.valueOf(boyId))
+                    .addListenerForSingleValueEvent(new ValueEventListener(){
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Boy boy = dataSnapshot.getValue(Boy.class);
@@ -63,15 +59,6 @@ public class PointsHomeActivity extends AppCompatActivity {
                     boyNameTextView.setText("Name = " + boy.getName());
                     totalPointTextView.setText("Total Points = " + boy.getTotalPoints());
 
-/*                    for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
-                        Boy boy = noteDataSnapshot.getValue(Boy.class);
-                        boysList.add(boy);
-                        if (boy.getId() == boyId) {
-                            boyNameTextView.setText("Name = " + boy.getName());
-                            Log.i(TAG, "Boy Name: " + boy.getName());
-                            totalPointTextView.setText("Total Points = " + boy.getTotalPoints());
-                        }
-                    }*/
                 }
 
                 @Override
