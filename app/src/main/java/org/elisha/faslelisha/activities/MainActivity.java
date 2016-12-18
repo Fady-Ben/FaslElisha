@@ -27,29 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public void init() {
         try {
 
-            /*FirebaseDatabase.getInstance().setPersistenceEnabled(true);
-            DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-            database.keepSynced(true);
-
-            database.child("Boys").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    List boys = new ArrayList<>();
-                    for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
-                        Boy boy = noteDataSnapshot.getValue(Boy.class);
-                        boys.add(boy);
-                        Log.i(TAG, "Boy Name: " + boy.getName());
-                        Log.i(TAG, "Boy id: " + boy.getId());
-                        Log.i(TAG, "Boy totalPoints: " + boy.getTotalPoints());
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError error) {
-                    // Failed to read value
-                    Log.w(TAG, "Failed to read value.", error.toException());
-                }
-            });*/
 
         } catch (Exception e) {
 
@@ -63,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Attendance_.intent(this).start();
     }
 
-    @Click(R.id.tayoButtonAM)
+/*    @Click(R.id.tayoButtonAM)
     void tayoButtonClicked() {
         updateBoyData();
         Log.i(TAG, "Data updated");
@@ -71,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateBoyData() {
         try {
-/*            DatabaseReference database;
+*//*            DatabaseReference database;
             database = FirebaseDatabase.getInstance().getReference();
-            database.child("Boys").child("Fady").child("id").setValue(1);*/
+            database.child("Boys").child("Fady").child("id").setValue(1);*//*
         } catch (Exception e) {
 
         }
-    }
+    }*/
 }
