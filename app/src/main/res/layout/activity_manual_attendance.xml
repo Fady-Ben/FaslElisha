@@ -32,12 +32,11 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="ID"
         android:ems="10"
+        android:inputType="number"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/idEditTextAMA" />
-
 
 </RelativeLayout>

@@ -6,101 +6,98 @@
     android:orientation="vertical"
     android:padding="10dp">
 
+    <TextView
+        android:id="@+id/boyNameTextViewAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/totalPointsAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/boyNameTextViewAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/attendanceTextViewAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/totalPointsAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/alkodasCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="القداس"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <TextView
-            android:id="@+id/attendanceTextViewAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/shamasCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="شماس"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <CheckBox
-            android:id="@+id/alkodasCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="القداس"
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/asmElKdisCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="أسم قديس السنكسار"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <CheckBox
-            android:id="@+id/shamasCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="شماس"
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/sertElKdisCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سيرة قديس السنكسار"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <CheckBox
-            android:id="@+id/asmElKdisCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="أسم قديس السنكسار"
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/alEngilCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="إنجيل القداس"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <CheckBox
-            android:id="@+id/sertElKdisCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="سيرة قديس السنكسار"
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/mawdo3AlEngilCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="موضوع إنجيل القداس "
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
 
-        <CheckBox
-            android:id="@+id/alEngilCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="إنجيل القداس"
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/hdorElFaslCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حضور الفصل " />
 
-        <CheckBox
-            android:id="@+id/mawdo3AlEngilCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="موضوع إنجيل القداس "
-            android:textAppearance="@android:style/TextAppearance.Holo.Widget" />
+    <CheckBox
+        android:id="@+id/eltzamCheckBoxAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حضور الفصل في المعاد " />
 
+    <CheckBox
+        android:id="@+id/hdo2FelFaslAPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الهدوء في الفصل " />
 
-        <CheckBox
-            android:id="@+id/hdorElFaslCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="حضور الفصل " />
-
-        <CheckBox
-            android:id="@+id/eltzamCheckBoxAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="حضور الفصل في المعاد " />
-
-        <CheckBox
-            android:id="@+id/hdo2FelFaslAPH"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="الهدوء في الفصل " />
-
-        <Button
-            android:id="@+id/submitButtonAPH"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Submit" />
+    <Button
+        android:id="@+id/submitButtonAPH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Submit" />
 
 </LinearLayout>
