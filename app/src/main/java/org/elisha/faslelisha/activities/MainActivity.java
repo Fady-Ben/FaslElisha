@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateBoyData() {
         try {
-            DatabaseReference database;
+/*            DatabaseReference database;
             database = FirebaseDatabase.getInstance().getReference();
-            database.child("Boys").child("Fady").child("id").setValue(1);
+            database.child("Boys").child("Fady").child("id").setValue(1);*/
         } catch (Exception e) {
 
         }

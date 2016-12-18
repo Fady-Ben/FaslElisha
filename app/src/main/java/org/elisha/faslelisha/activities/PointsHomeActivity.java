@@ -1,5 +1,6 @@
 package org.elisha.faslelisha.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import org.elisha.faslelisha.models.Boy;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+
 @EActivity(R.layout.activity_points_home)
 public class PointsHomeActivity extends AppCompatActivity {
 
@@ -30,36 +33,45 @@ public class PointsHomeActivity extends AppCompatActivity {
     @Extra
     protected int boyId;
 
+    @Extra
+    protected Class referrerActivityClass;
+
+    protected List<Boy> boysList = new ArrayList<>();
+
     @ViewById(R.id.boyNameTextViewAPH)
-    TextView boyNameTextView;
+    protected TextView boyNameTextView;
 
     @ViewById(R.id.totalPointsAPH)
-    TextView totalPointTextView;
+    protected TextView totalPointTextView;
+    private Boy boy;
 
-    private List boys = new ArrayList<>();
 
     @AfterExtras
     public void initView() {
-        Log.i(TAG, "Boyid from extras: " + boyId);
 
         try {
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             DatabaseReference database = FirebaseDatabase.getInstance().getReference();
             database.keepSynced(true);
 
-            database.child("Boys").addValueEventListener(new ValueEventListener() {
+            database.child("Boys").child(String.valueOf(boyId)).addValueEventListener(new ValueEventListener() {
+
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    Boy boy = dataSnapshot.getValue(Boy.class);
+                    Log.i(TAG, "Boys data = " + dataSnapshot.getValue(Boy.class));
+                    boyNameTextView.setText("Name = " + boy.getName());
+                    totalPointTextView.setText("Total Points = " + boy.getTotalPoints());
 
-                    for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
+/*                    for (DataSnapshot noteDataSnapshot : dataSnapshot.getChildren()) {
                         Boy boy = noteDataSnapshot.getValue(Boy.class);
+                        boysList.add(boy);
                         if (boy.getId() == boyId) {
                             boyNameTextView.setText("Name = " + boy.getName());
                             Log.i(TAG, "Boy Name: " + boy.getName());
                             totalPointTextView.setText("Total Points = " + boy.getTotalPoints());
                         }
-                        boys.add(boy);
-                    }
+                    }*/
                 }
 
                 @Override
@@ -71,16 +83,29 @@ public class PointsHomeActivity extends AppCompatActivity {
             });
 
 
+            Toast.makeText(getApplicationContext(), "Boys List size = " + boysList.size(), Toast.LENGTH_SHORT).show();
+
+/*         //for (Boy boyTemp : boys)
+           for (int i = 0; i < boys.size(); i++) {
+                temp = boys.get(i);
+                Toast.makeText(getApplicationContext(), "Boy Name: " + temp.getName(), Toast.LENGTH_SHORT).show();
+                Log.i(TAG, "Boy Name: " + temp.getName());
+
+            }*/
 
         } catch (Exception e) {
 
         }
-
     }
 
     @Click(R.id.submitButtonAPH)
     void submitButtonPressed() {
-        MainActivity_.intent(this).start();
+        referrerActivityClass = org.elisha.faslelisha.activities.MainActivity_.class;
+        Intent intent = new Intent(this, referrerActivityClass);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
+//        MainActivity_.intent(this).start();
     }
 
 }
